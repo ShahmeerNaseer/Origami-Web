@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - OrigamiForAll</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="padding-top: 80px;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-paper-plane me-2"></i>OrigamiForAll
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-origami.html">About Origami</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="categories.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-light-blue py-5 mb-5 text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-primary-custom">Origami Categories</h1>
+            <p class="lead text-muted">Choose a category and start your folding journey.</p>
+        </div>
+    </section>
+
+    <!-- Levels Filter -->
+    <div class="container mb-4 text-center">
+        <div class="btn-group shadow-sm" role="group" aria-label="Difficulty Levels">
+            <a href="#easy" class="btn btn-outline-primary">Easy for Kids</a>
+            <a href="#medium" class="btn btn-outline-primary">Medium Designs</a>
+            <a href="#complex" class="btn btn-outline-primary">Complex for Elders</a>
+        </div>
+    </div>
+
+    <!-- Design Categories Grid -->
+    <div class="container mb-5">
+        <h2 class="section-title text-center d-block mx-auto mb-5">Explore All Designs</h2>
+        <div class="row g-4" id="categoryList">
+            <!-- 10 Categories generated via JS or hardcoded below -->
+        </div>
+    </div>
+
+    <!-- Details Modal (Used in JS to simulate design details) -->
+    <div class="modal fade" id="designModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-light-blue border-0">
+                    <h5 class="modal-title fw-bold text-primary-custom" id="modalTitle">Design Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <img src="" id="modalImg" class="img-fluid rounded shadow-sm w-100" alt="Design">
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="text-accent fw-bold">Description</h5>
+                            <p id="modalDesc" class="text-muted"></p>
+                            <h5 class="text-accent fw-bold mt-3">Materials Required</h5>
+                            <ul class="text-muted" id="modalMaterials">
+                                <li>1 square sheet of origami paper (15x15 cm)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h4 class="fw-bold mb-3">Step-by-step Instructions</h4>
+                            <div id="modalSteps">
+                                <!-- Steps injected by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container border-top pt-4 pb-2">
+            <p class="footer-text small mb-0">&copy; 2026 OrigamiForAll. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

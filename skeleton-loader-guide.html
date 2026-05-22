@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skeleton Loader Usage Guide - OrigamiForAll</title>
+<style>
+body { font-family: 'Poppins', sans-serif; margin: 40px; background: #f8f0ff; color: #1A1A2E; line-height: 1.8; }
+h1 { color: #FF006E; }
+h2 { color: #3A86FF; border-bottom: 2px solid #FB5607; padding-bottom: 5px; }
+h3 { color: #8338EC; }
+code { background: #ffe0ec; padding: 2px 8px; border-radius: 4px; font-family: monospace; color: #FF006E; }
+pre { background: #1A1A2E; color: #fff; padding: 20px; border-radius: 10px; overflow-x: auto; font-size: 13px; }
+.box { background: white; padding: 20px; border-radius: 15px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.tip { background: #fff9e6; border-left: 4px solid #FFBE0B; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.step { background: #e6f0ff; border-left: 4px solid #3A86FF; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<h1>🎨 Funky Theme + 💀 Skeleton Loader Guide</h1>
+
+<div class="box">
+<h2>🌈 New Funky Color Theme</h2>
+<p>Your CSS now uses a bold, vibrant funky palette:</p>
+<ul>
+<li><strong>Primary:</strong> Hot Pink <code>#FF006E</code></li>
+<li><strong>Secondary:</strong> Electric Blue <code>#3A86FF</code></li>
+<li><strong>Accent:</strong> Neon Orange <code>#FB5607</code></li>
+<li><strong>Success:</strong> Electric Purple <code>#8338EC</code></li>
+<li><strong>Dark:</strong> Deep Navy <code>#1A1A2E</code></li>
+<li><strong>Hero:</strong> Rainbow gradient (Pink → Orange → Yellow → Blue → Purple)</li>
+</ul>
+</div>
+
+<h2>💀 How to Use Skeleton Loaders</h2>
+<p>Skeleton loaders show a grey animated placeholder while content loads. Here's how to add them to your pages:</p>
+
+<div class="step">
+<h3>Step 1: Add Skeleton HTML (Before Content Loads)</h3>
+<p>Wrap your content area with a skeleton placeholder. When the real content loads, swap it out.</p>
+</div>
+
+<h3>📍 Example: Map Skeleton Loader (contact.html)</h3>
+<pre>&lt;!-- SKELETON LOADER (shown while map is loading) --&gt;
+&lt;div id="map-skeleton" class="skeleton skeleton-map"&gt;&lt;/div&gt;
+
+&lt;!-- ACTUAL MAP (hidden initially) --&gt;
+&lt;div id="map-content" class="content-loaded" style="display:none;"&gt;
+    &lt;iframe 
+        src="https://www.google.com/maps/embed?pb=..."
+        width="100%" height="100%" style="border:0;"
+        allowfullscreen loading="lazy"
+        onload="showMap()"&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function showMap() {
+    document.getElementById('map-skeleton').style.display = 'none';
+    const mapContent = document.getElementById('map-content');
+    mapContent.style.display = 'block';
+    // Small delay to trigger fade-in
+    setTimeout(() =&gt; mapContent.classList.add('show'), 50);
+}
+&lt;/script&gt;</pre>
+
+<h3>🃏 Example: Card Skeleton Loader (categories.html or index.html)</h3>
+<pre>&lt;!-- SKELETON CARD --&gt;
+&lt;div id="card-skeleton-1" class="skeleton-card"&gt;
+    &lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-text short"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-button"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ACTUAL CARD (hidden initially) --&gt;
+&lt;div id="card-content-1" class="content-loaded" style="display:none;"&gt;
+    &lt;div class="card"&gt;
+        &lt;img src="images/crane.png" alt="Paper Crane"&gt;
+        &lt;h4&gt;Paper Crane&lt;/h4&gt;
+        &lt;p&gt;Learn to fold a beautiful paper crane.&lt;/p&gt;
+        &lt;button&gt;Learn More&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// Simulate loading delay (remove this in production, use real data fetch)
+setTimeout(() =&gt; {
+    document.getElementById('card-skeleton-1').style.display = 'none';
+    const content = document.getElementById('card-content-1');
+    content.style.display = 'block';
+    setTimeout(() =&gt; content.classList.add('show'), 50);
+}, 1500); // 1.5 second fake loading time
+&lt;/script&gt;</pre>
+
+<h3>📝 Example: Form Skeleton Loader</h3>
+<pre>&lt;div id="form-skeleton"&gt;
+    &lt;div class="skeleton skeleton-form"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-form"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-form"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-form" style="height:100px;"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-button"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;form id="contact-form" style="display:none;"&gt;
+    &lt;!-- your actual form fields --&gt;
+&lt;/form&gt;</pre>
+
+<h3>🖼️ Example: Gallery Image Skeletons</h3>
+<pre>&lt;div class="col-md-4"&gt;
+    &lt;div id="gallery-skeleton-1" class="skeleton skeleton-image large"&gt;&lt;/div&gt;
+    &lt;div id="gallery-content-1" class="content-loaded" style="display:none;"&gt;
+        &lt;div class="gallery-item"&gt;
+            &lt;img src="images/crane.png" onload="showGallery(1)"&gt;
+            &lt;div class="gallery-overlay"&gt;&lt;h4&gt;Paper Crane&lt;/h4&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function showGallery(id) {
+    document.getElementById('gallery-skeleton-' + id).style.display = 'none';
+    const content = document.getElementById('gallery-content-' + id);
+    content.style.display = 'block';
+    setTimeout(() =&gt; content.classList.add('show'), 50);
+}
+&lt;/script&gt;</pre>
+
+<div class="tip">
+<h3>🔑 Quick Reference: Skeleton CSS Classes</h3>
+<table border="0" cellpadding="8">
+<tr><td><code>.skeleton</code></td><td>Base animated shimmer effect</td></tr>
+<tr><td><code>.skeleton-text</code></td><td>Text line placeholder (16px height)</td></tr>
+<tr><td><code>.skeleton-text.short</code></td><td>60% width text line</td></tr>
+<tr><td><code>.skeleton-text.medium</code></td><td>80% width text line</td></tr>
+<tr><td><code>.skeleton-title</code></td><td>Title placeholder (28px height)</td></tr>
+<tr><td><code>.skeleton-image</code></td><td>Image placeholder (200px height)</td></tr>
+<tr><td><code>.skeleton-image.large</code></td><td>300px height image</td></tr>
+<tr><td><code>.skeleton-image.small</code></td><td>120px height image</td></tr>
+<tr><td><code>.skeleton-avatar</code></td><td>Circle avatar (50x50px)</td></tr>
+<tr><td><code>.skeleton-button</code></td><td>Button placeholder (120x40px)</td></tr>
+<tr><td><code>.skeleton-card</code></td><td>Full card placeholder</td></tr>
+<tr><td><code>.skeleton-map</code></td><td>Map placeholder (450px height)</td></tr>
+<tr><td><code>.skeleton-form</code></td><td>Form input placeholder</td></tr>
+</table>
+</div>
+
+<div class="tip">
+<h3>⚡ Pro Tips</h3>
+<ul>
+<li>Use <code>onload</code> on images/iframes to trigger the skeleton hide</li>
+<li>Use <code>setTimeout</code> to simulate loading during development</li>
+<li>For real data fetching, hide skeleton in the <code>.then()</code> or <code>await</code> after your fetch completes</li>
+<li>The shimmer animation runs automatically — no JS needed for the animation itself!</li>
+<li>Combine multiple skeleton elements to match your layout structure</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>🚀 Full Page Skeleton Example (for index.html)</h3>
+<pre>&lt;body&gt;
+    &lt;!-- FULL PAGE SKELETON --&gt;
+    &lt;div id="page-skeleton"&gt;
+        &lt;div class="skeleton" style="height:80px; width:100%; border-radius:0;"&gt;&lt;/div&gt;
+        &lt;div class="skeleton" style="height:400px; width:100%; border-radius:0; margin:20px 0;"&gt;&lt;/div&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-4"&gt;&lt;div class="skeleton-card"&gt;&lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;&lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;div class="col-md-4"&gt;&lt;div class="skeleton-card"&gt;&lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;&lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+                &lt;div class="col-md-4"&gt;&lt;div class="skeleton-card"&gt;&lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;&lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;&lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ACTUAL PAGE CONTENT (hidden initially) --&gt;
+    &lt;div id="page-content" style="display:none;"&gt;
+        &lt;!-- your actual page content here --&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+    window.addEventListener('load', () =&gt; {
+        setTimeout(() =&gt; {
+            document.getElementById('page-skeleton').style.display = 'none';
+            document.getElementById('page-content').style.display = 'block';
+        }, 1000); // 1 second loading simulation
+    });
+    &lt;/script&gt;
+&lt;/body&gt;</pre>
+</div>
+
+</body>
+</html>

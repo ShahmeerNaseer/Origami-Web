@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Code Documentation</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; }
+h1 { color: #2c3e50; }
+h2 { color: #34495e; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+pre { background: #f8f9fa; padding: 15px; border: 1px solid #ddd; border-radius: 5px; overflow-x: auto; font-size: 12px; }
+code { font-family: Consolas, monospace; }
+p.explanation { font-style: italic; color: #555; line-height: 1.6; }
+.page-break { page-break-after: always; }
+</style>
+</head>
+<body>
+<h1>OrigamiForAll - Code Documentation</h1><div class='page-break'><h2>File: index.html</h2><p class='explanation'>The home page containing the main splash screen, hero section, a brief introduction to origami, and featured categories.<br>It serves as the primary landing page to navigate the website and welcome users.<br>The page also includes links to all other sections of the platform.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;OrigamiForAll - Home&lt;/title&gt;
+    &lt;meta name="description"
+        content="Learn the beautiful art of paper folding with OrigamiForAll. Discover easy and complex designs, step-by-step guides, and a gallery of amazing creations."&gt;
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!-- Custom CSS --&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;!-- Font Awesome --&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;!-- Splash Screen --&gt;
+    &lt;div id="splash-screen" class="splash-screen"&gt;
+        &lt;div class="splash-content"&gt;
+            &lt;h2 class="splash-title"&gt;OrigamiForAll&lt;/h2&gt;
+            &lt;p class="splash-subtitle"&gt;Created By:&lt;/p&gt;
+            &lt;h3 class="team-names"&gt;
+                &lt;span&gt;Ali Raza&lt;/span&gt; •
+                &lt;span&gt;Ibad ur rehman&lt;/span&gt; •
+                &lt;span&gt;Adil Hussain&lt;/span&gt; •
+                &lt;span&gt;Shahmeer Naseer&lt;/span&gt; •
+                &lt;span&gt;Mehroz Rehman&lt;/span&gt;
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt;
+                        &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown"&gt;
+                            Categories
+                        &lt;/a&gt;
+                        &lt;ul class="dropdown-menu border-0 shadow-sm"&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="categories.html#easy"&gt;Easy for Kids&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="categories.html#complex"&gt;Complex for Elders&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;hr class="dropdown-divider"&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="categories.html#animals"&gt;Animals&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="categories.html#birds"&gt;Birds&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="categories.html#flowers"&gt;Flowers&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class="dropdown-item" href="categories.html"&gt;View All&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;section class="hero-section text-center d-flex align-items-center" style="min-height: 80vh;"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row justify-content-center"&gt;
+                &lt;div class="col-md-8"&gt;
+                    &lt;h1 class="hero-title"&gt;Master the Art of Paper Folding&lt;/h1&gt;
+                    &lt;p class="lead mb-4"&gt;Discover the magic of origami. From simple designs for kids to complex
+                        masterpieces for elders. Unleash your creativity today!&lt;/p&gt;
+                    &lt;a href="categories.html" class="btn btn-custom btn-lg me-3"&gt;Start Folding&lt;/a&gt;
+                    &lt;a href="about-origami.html" class="btn btn-outline-light btn-lg rounded-pill px-4"&gt;Learn More&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="py-5 bg-light-blue"&gt;
+        &lt;div class="container text-center"&gt;
+            &lt;h2 class="section-title"&gt;What is Origami?&lt;/h2&gt;
+            &lt;p class="lead w-75 mx-auto mt-4 text-muted"&gt;Origami is the traditional Japanese art of paper folding. The
+                goal is to transform a flat square sheet of paper into a finished sculpture through folding and
+                sculpting techniques.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="py-5"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="section-title text-center d-block mx-auto mb-5"&gt;Featured Categories&lt;/h2&gt;
+            &lt;div class="row g-4"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="card text-center p-4"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;i class="fa-solid fa-child text-accent fa-3x mb-3"&gt;&lt;/i&gt;
+                            &lt;h4 class="card-title"&gt;Easy for Kids&lt;/h4&gt;
+                            &lt;p class="card-text text-muted"&gt;Simple folds perfect for beginners and children to build
+                                confidence.&lt;/p&gt;
+                            &lt;a href="categories.html#easy"
+                                class="btn btn-sm btn-outline-primary rounded-pill"&gt;Explore&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="card text-center p-4"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;i class="fa-solid fa-dove text-secondary fa-3x mb-3"&gt;&lt;/i&gt;
+                            &lt;h4 class="card-title"&gt;Animals &amp; Birds&lt;/h4&gt;
+                            &lt;p class="card-text text-muted"&gt;Create beautiful paper creatures ranging from cranes to
+                                elephants.&lt;/p&gt;
+                            &lt;a href="categories.html#animals"
+                                class="btn btn-sm btn-outline-primary rounded-pill"&gt;Explore&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="card text-center p-4"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;i class="fa-solid fa-brain text-success-custom fa-3x mb-3"
+                                style="color: var(--success-color)"&gt;&lt;/i&gt;
+                            &lt;h4 class="card-title"&gt;Complex Designs&lt;/h4&gt;
+                            &lt;p class="card-text text-muted"&gt;Challenging models for experienced folders looking to push
+                                their skills.&lt;/p&gt;
+                            &lt;a href="categories.html#complex"
+                                class="btn btn-sm btn-outline-primary rounded-pill"&gt;Explore&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;footer class="text-center mt-0"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row mb-4"&gt;
+                &lt;div class="col-md-4 mb-3"&gt;
+                    &lt;h5 class="text-primary-custom fw-bold"&gt;&lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+                    &lt;/h5&gt;
+                    &lt;p class="text-muted small"&gt;Bringing the joy of paper folding to everyone. Explore, learn, and
+                        create.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 mb-3"&gt;
+                    &lt;h5 class="text-dark fw-bold"&gt;Quick Links&lt;/h5&gt;
+                    &lt;ul class="list-unstyled small"&gt;
+                        &lt;li&gt;&lt;a href="about-origami.html" class="text-muted text-decoration-none"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="categories.html" class="text-muted text-decoration-none"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="gallery.html" class="text-muted text-decoration-none"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="col-md-4 mb-3"&gt;
+                    &lt;h5 class="text-dark fw-bold"&gt;Connect&lt;/h5&gt;
+                    &lt;a href="#" class="text-muted me-3 fs-5"&gt;&lt;i class="fa-brands fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href="#" class="text-muted me-3 fs-5"&gt;&lt;i class="fa-brands fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href="#" class="text-muted fs-5"&gt;&lt;i class="fa-brands fa-youtube"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="border-top pt-3"&gt;
+                &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;!-- Bootstrap JS --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre></div><div class='page-break'><h2>File: about-origami.html</h2><p class='explanation'>Provides the history, origins, and benefits of origami, explaining its roots in China and popularity in Japan.<br>It highlights the positive impact of paper folding on mind development, patience, and creativity.<br>The page uses a clean layout to present educational text and images.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;About Origami - OrigamiForAll&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+&lt;body style="padding-top: 80px;"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="categories.html"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Page Header --&gt;
+    &lt;section class="bg-light-blue py-5 mb-5 text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="display-4 fw-bold text-primary-custom"&gt;History &amp; Benefits of Origami&lt;/h1&gt;
+            &lt;p class="lead text-muted"&gt;Discover the ancient roots and modern advantages of paper folding.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Content Section --&gt;
+    &lt;div class="container mb-5"&gt;
+        &lt;div class="row align-items-center mb-5"&gt;
+            &lt;div class="col-md-6 order-md-2 mb-4"&gt;
+                &lt;img src="images/banner.png" alt="Origami History" class="img-fluid rounded-custom shadow"&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6 order-md-1"&gt;
+                &lt;h2 class="section-title"&gt;The Origins&lt;/h2&gt;
+                &lt;p&gt;&lt;strong&gt;Started in China:&lt;/strong&gt; The invention of paper around 105 A.D. in China led to the first forms of paper folding. Originally, it was used for ceremonial purposes due to the high cost of paper.&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Popularity in Japan:&lt;/strong&gt; The art was introduced to Japan by monks in the 6th century. It quickly became deeply embedded in Japanese culture, evolving into the art form we now know as "Origami" (from &lt;em&gt;ori&lt;/em&gt; meaning "folding", and &lt;em&gt;kami&lt;/em&gt; meaning "paper").&lt;/p&gt;
+                &lt;p&gt;Today, origami is practiced all over the world, inspiring art, mathematics, and engineering.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row bg-soft-green p-5 rounded-custom mt-5 shadow-sm"&gt;
+            &lt;div class="col-12 text-center mb-4"&gt;
+                &lt;h2 class="section-title"&gt;Benefits of Origami&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-3 text-center mb-4"&gt;
+                &lt;i class="fa-solid fa-lightbulb text-accent fa-3x mb-3"&gt;&lt;/i&gt;
+                &lt;h4 class="fw-bold"&gt;Improves Creativity&lt;/h4&gt;
+                &lt;p class="text-muted"&gt;Transforms a simple piece of paper into complex, beautiful shapes.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-3 text-center mb-4"&gt;
+                &lt;i class="fa-solid fa-brain text-primary-custom fa-3x mb-3"&gt;&lt;/i&gt;
+                &lt;h4 class="fw-bold"&gt;Mind Development&lt;/h4&gt;
+                &lt;p class="text-muted"&gt;Enhances spatial reasoning, geometry understanding, and cognitive skills.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-3 text-center mb-4"&gt;
+                &lt;i class="fa-solid fa-hourglass text-secondary fa-3x mb-3"&gt;&lt;/i&gt;
+                &lt;h4 class="fw-bold"&gt;Builds Patience&lt;/h4&gt;
+                &lt;p class="text-muted"&gt;Requires focus, precision, and time, teaching patience naturally.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-3 text-center mb-4"&gt;
+                &lt;i class="fa-solid fa-face-smile text-warning fa-3x mb-3"&gt;&lt;/i&gt;
+                &lt;h4 class="fw-bold"&gt;Fun Activity&lt;/h4&gt;
+                &lt;p class="text-muted"&gt;A relaxing, enjoyable hobby for people of all ages.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="text-center"&gt;
+        &lt;div class="container border-top pt-4 pb-2"&gt;
+            &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><div class='page-break'><h2>File: about-us.html</h2><p class='explanation'>Contains the team's mission, vision, and learning purpose for the OrigamiForAll website.<br>It shares the goal of providing an accessible, free platform for everyone to learn the art of origami.<br>Designed to build trust and convey the educational value of the project.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;About Us - OrigamiForAll&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+&lt;body style="padding-top: 80px;"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="categories.html"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Page Header --&gt;
+    &lt;section class="bg-light-blue py-5 mb-5 text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="display-4 fw-bold text-primary-custom"&gt;Who We Are&lt;/h1&gt;
+            &lt;p class="lead text-muted"&gt;Spreading the joy of paper folding to every corner of the world.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Mission &amp; Vision --&gt;
+    &lt;div class="container mb-5"&gt;
+        &lt;div class="row g-5"&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 20px;"&gt;
+                    &lt;div class="card-body text-center"&gt;
+                        &lt;i class="fa-solid fa-bullseye text-accent fa-3x mb-3"&gt;&lt;/i&gt;
+                        &lt;h3 class="fw-bold"&gt;Our Mission&lt;/h3&gt;
+                        &lt;p class="text-muted mt-3"&gt;To provide an accessible, beautiful, and educational platform where people of all ages can learn the art of origami for free. We believe creativity should have no boundaries.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;div class="card h-100 p-4 border-0 shadow-sm" style="border-radius: 20px;"&gt;
+                    &lt;div class="card-body text-center"&gt;
+                        &lt;i class="fa-solid fa-book-open text-primary-custom fa-3x mb-3"&gt;&lt;/i&gt;
+                        &lt;h3 class="fw-bold"&gt;Learning Purpose&lt;/h3&gt;
+                        &lt;p class="text-muted mt-3"&gt;OrigamiForAll is designed as an interactive learning hub. From cognitive development in children to stress relief for elders, we curate designs that nurture the mind and soul.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="text-center mt-5"&gt;
+        &lt;div class="container border-top pt-4 pb-2"&gt;
+            &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><div class='page-break'><h2>File: categories.html</h2><p class='explanation'>Displays a grid of different origami designs categorized by difficulty (easy, medium, complex).<br>Content is dynamically loaded via JavaScript, allowing easy expansion of the origami database.<br>It includes a modal to view detailed step-by-step instructions for specific designs.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Categories - OrigamiForAll&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+&lt;body style="padding-top: 80px;"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="categories.html"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Page Header --&gt;
+    &lt;section class="bg-light-blue py-5 mb-5 text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="display-4 fw-bold text-primary-custom"&gt;Origami Categories&lt;/h1&gt;
+            &lt;p class="lead text-muted"&gt;Choose a category and start your folding journey.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Levels Filter --&gt;
+    &lt;div class="container mb-4 text-center"&gt;
+        &lt;div class="btn-group shadow-sm" role="group" aria-label="Difficulty Levels"&gt;
+            &lt;a href="#easy" class="btn btn-outline-primary"&gt;Easy for Kids&lt;/a&gt;
+            &lt;a href="#medium" class="btn btn-outline-primary"&gt;Medium Designs&lt;/a&gt;
+            &lt;a href="#complex" class="btn btn-outline-primary"&gt;Complex for Elders&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Design Categories Grid --&gt;
+    &lt;div class="container mb-5"&gt;
+        &lt;h2 class="section-title text-center d-block mx-auto mb-5"&gt;Explore All Designs&lt;/h2&gt;
+        &lt;div class="row g-4" id="categoryList"&gt;
+            &lt;!-- 10 Categories generated via JS or hardcoded below --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Details Modal (Used in JS to simulate design details) --&gt;
+    &lt;div class="modal fade" id="designModal" tabindex="-1"&gt;
+        &lt;div class="modal-dialog modal-lg"&gt;
+            &lt;div class="modal-content"&gt;
+                &lt;div class="modal-header bg-light-blue border-0"&gt;
+                    &lt;h5 class="modal-title fw-bold text-primary-custom" id="modalTitle"&gt;Design Name&lt;/h5&gt;
+                    &lt;button type="button" class="btn-close" data-bs-dismiss="modal"&gt;&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="modal-body p-4"&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-md-5 mb-3"&gt;
+                            &lt;img src="" id="modalImg" class="img-fluid rounded shadow-sm w-100" alt="Design"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-md-7"&gt;
+                            &lt;h5 class="text-accent fw-bold"&gt;Description&lt;/h5&gt;
+                            &lt;p id="modalDesc" class="text-muted"&gt;&lt;/p&gt;
+                            &lt;h5 class="text-accent fw-bold mt-3"&gt;Materials Required&lt;/h5&gt;
+                            &lt;ul class="text-muted" id="modalMaterials"&gt;
+                                &lt;li&gt;1 square sheet of origami paper (15x15 cm)&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row mt-4"&gt;
+                        &lt;div class="col-12"&gt;
+                            &lt;h4 class="fw-bold mb-3"&gt;Step-by-step Instructions&lt;/h4&gt;
+                            &lt;div id="modalSteps"&gt;
+                                &lt;!-- Steps injected by JS --&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="text-center"&gt;
+        &lt;div class="container border-top pt-4 pb-2"&gt;
+            &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><div class='page-break'><h2>File: contact.html</h2><p class='explanation'>Features contact details and a form for users to get in touch with the OrigamiForAll team.<br>It provides the physical address, phone number, and email for support or inquiries.<br>The page uses a visually appealing two-column layout with a colorful contact info card.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Contact Us - OrigamiForAll&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+
+&lt;body style="padding-top: 80px;"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="categories.html"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Page Header --&gt;
+    &lt;section class="bg-light-blue py-5 mb-5 text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="display-4 fw-bold text-primary-custom"&gt;Get In Touch&lt;/h1&gt;
+            &lt;p class="lead text-muted"&gt;Have a question or want to share your creations? Reach out to us!&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Contact Info &amp; Form --&gt;
+    &lt;div class="container mb-5"&gt;
+        &lt;div class="row g-5"&gt;
+            &lt;!-- Contact Details --&gt;
+            &lt;div class="col-md-5"&gt;
+                &lt;div class="card p-4 border-0 shadow-sm bg-primary text-white"
+                    style="border-radius: 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));"&gt;
+                    &lt;h3 class="fw-bold mb-4"&gt;Contact Information&lt;/h3&gt;
+                    &lt;p class="mb-4 text-light"&gt;Fill up the form and our team will get back to you within 24 hours.&lt;/p&gt;
+
+                    &lt;div class="d-flex align-items-center mb-4"&gt;
+                        &lt;i class="fa-solid fa-location-dot fa-2x me-3"&gt;&lt;/i&gt;
+                        &lt;div&gt;
+                            &lt;h6 class="mb-0 fw-bold"&gt;Address&lt;/h6&gt;
+                            &lt;span class="small"&gt;123 Paper Fold Avenue, Art District, NY 10001&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="d-flex align-items-center mb-4"&gt;
+                        &lt;i class="fa-solid fa-phone fa-2x me-3"&gt;&lt;/i&gt;
+                        &lt;div&gt;
+                            &lt;h6 class="mb-0 fw-bold"&gt;Phone&lt;/h6&gt;
+                            &lt;span class="small"&gt;+92 314 2978025&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="d-flex align-items-center mb-4"&gt;
+                        &lt;i class="fa-solid fa-envelope fa-2x me-3"&gt;&lt;/i&gt;
+                        &lt;div&gt;
+                            &lt;h6 class="mb-0 fw-bold"&gt;Email&lt;/h6&gt;
+                            &lt;span class="small"&gt;&lt;a href="mailto:info@origamiforall.com"
+                                    class="text-white text-decoration-none"&gt;info@origamiforall.com&lt;/a&gt;&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="mt-auto pt-5"&gt;
+                        &lt;a href="#" class="text-white me-3 fs-4"&gt;&lt;i class="fa-brands fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="#" class="text-white me-3 fs-4"&gt;&lt;i class="fa-brands fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="#" class="text-white fs-4"&gt;&lt;i class="fa-brands fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Contact Form --&gt;
+            &lt;div class="col-md-7"&gt;
+                &lt;div class="card p-4 border-0 shadow-sm" style="border-radius: 20px;"&gt;
+                    &lt;form onsubmit="event.preventDefault(); alert('Message Sent Successfully!');"&gt;
+                        &lt;div class="row"&gt;
+                            &lt;div class="col-md-6 mb-3"&gt;
+                                &lt;label class="form-label fw-bold text-dark"&gt;First Name&lt;/label&gt;
+                                &lt;input type="text" class="form-control bg-light" required&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-md-6 mb-3"&gt;
+                                &lt;label class="form-label fw-bold text-dark"&gt;Last Name&lt;/label&gt;
+                                &lt;input type="text" class="form-control bg-light" required&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-3"&gt;
+                            &lt;label class="form-label fw-bold text-dark"&gt;Email Address&lt;/label&gt;
+                            &lt;input type="email" class="form-control bg-light" required&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-3"&gt;
+                            &lt;label class="form-label fw-bold text-dark"&gt;Subject&lt;/label&gt;
+                            &lt;input type="text" class="form-control bg-light" required&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-4"&gt;
+                            &lt;label class="form-label fw-bold text-dark"&gt;Message&lt;/label&gt;
+                            &lt;textarea class="form-control bg-light" rows="4" required&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;button type="submit" class="btn btn-custom w-100"&gt;Send Message&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="text-center mt-5"&gt;
+        &lt;div class="container border-top pt-4 pb-2"&gt;
+            &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre></div><div class='page-break'><h2>File: feedback.html</h2><p class='explanation'>A page designed for users to submit their feedback and suggestions regarding their experience.<br>It features a dropdown for experience rating and a text area for improvement ideas.<br>The form is styled with modern inputs and clear labeling for user convenience.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Feedback - OrigamiForAll&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+&lt;body style="padding-top: 80px;"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="categories.html"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Page Header --&gt;
+    &lt;section class="bg-light-blue py-5 mb-5 text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="display-4 fw-bold text-primary-custom"&gt;We Value Your Feedback&lt;/h1&gt;
+            &lt;p class="lead text-muted"&gt;Tell us about your experience and how we can improve.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Feedback Form --&gt;
+    &lt;div class="container mb-5"&gt;
+        &lt;div class="row justify-content-center"&gt;
+            &lt;div class="col-md-8"&gt;
+                &lt;div class="card p-5 shadow border-0" style="border-radius: 20px;"&gt;
+                    &lt;form onsubmit="event.preventDefault(); alert('Thank you for your feedback!');"&gt;
+                        &lt;div class="mb-4"&gt;
+                            &lt;label for="name" class="form-label fw-bold text-dark"&gt;Your Name&lt;/label&gt;
+                            &lt;input type="text" class="form-control form-control-lg bg-light" id="name" placeholder="John Doe" required&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-4"&gt;
+                            &lt;label for="email" class="form-label fw-bold text-dark"&gt;Email Address&lt;/label&gt;
+                            &lt;input type="email" class="form-control form-control-lg bg-light" id="email" placeholder="john@example.com" required&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-4"&gt;
+                            &lt;label class="form-label fw-bold text-dark"&gt;Your Experience&lt;/label&gt;
+                            &lt;select class="form-select form-select-lg bg-light" required&gt;
+                                &lt;option value="" disabled selected&gt;Select an option...&lt;/option&gt;
+                                &lt;option value="excellent"&gt;Excellent - I loved it!&lt;/option&gt;
+                                &lt;option value="good"&gt;Good - Enjoyed the folds&lt;/option&gt;
+                                &lt;option value="average"&gt;Average - Needs more models&lt;/option&gt;
+                                &lt;option value="poor"&gt;Poor - Hard to follow&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mb-4"&gt;
+                            &lt;label for="suggestions" class="form-label fw-bold text-dark"&gt;Suggestions&lt;/label&gt;
+                            &lt;textarea class="form-control bg-light" id="suggestions" rows="5" placeholder="Tell us how we can improve our tutorials..." required&gt;&lt;/textarea&gt;
+                        &lt;/div&gt;
+                        &lt;div class="text-center mt-5"&gt;
+                            &lt;button type="submit" class="btn btn-custom btn-lg px-5"&gt;Submit Feedback&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="text-center"&gt;
+        &lt;div class="container border-top pt-4 pb-2"&gt;
+            &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><div class='page-break'><h2>File: gallery.html</h2><p class='explanation'>Displays a visually appealing grid of completed origami models as a showcase.<br>It uses image cards with hover overlays to elegantly highlight different paper art creations.<br>The gallery aims to inspire users by showing what they can achieve.<br></p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Gallery - OrigamiForAll&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+&lt;body style="padding-top: 80px;"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-light fixed-top"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="index.html"&gt;
+                &lt;i class="fa-solid fa-paper-plane me-2"&gt;&lt;/i&gt;OrigamiForAll
+            &lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+                &lt;ul class="navbar-nav ms-auto"&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-origami.html"&gt;About Origami&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="categories.html"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="feedback.html"&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="about-us.html"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="contact.html"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Page Header --&gt;
+    &lt;section class="bg-light-blue py-5 mb-5 text-center"&gt;
+        &lt;div class="container"&gt;
+            &lt;h1 class="display-4 fw-bold text-primary-custom"&gt;Our Gallery&lt;/h1&gt;
+            &lt;p class="lead text-muted"&gt;A collection of beautiful, completed origami models.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Gallery Grid --&gt;
+    &lt;div class="container mb-5"&gt;
+        &lt;div class="row g-4"&gt;
+            &lt;!-- Gallery Item 1 --&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="gallery-item shadow-sm"&gt;
+                    &lt;img src="images/crane.png" class="img-fluid w-100" alt="Paper Crane" style="height: 300px; object-fit: cover;"&gt;
+                    &lt;div class="gallery-overlay"&gt;
+                        &lt;h4 class="fw-bold"&gt;Paper Crane&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Gallery Item 2 --&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="gallery-item shadow-sm"&gt;
+                    &lt;img src="images/flower.png" class="img-fluid w-100" alt="Origami Flowers" style="height: 300px; object-fit: cover;"&gt;
+                    &lt;div class="gallery-overlay"&gt;
+                        &lt;h4 class="fw-bold"&gt;Origami Flowers&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Gallery Item 3 --&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="gallery-item shadow-sm"&gt;
+                    &lt;img src="images/banner.png" class="img-fluid w-100" alt="Modular Kusudama" style="height: 300px; object-fit: cover;"&gt;
+                    &lt;div class="gallery-overlay"&gt;
+                        &lt;h4 class="fw-bold"&gt;Modular Kusudama&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Gallery Item 4 --&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="gallery-item shadow-sm"&gt;
+                    &lt;img src="images/crane.png" class="img-fluid w-100" alt="Abstract Origami" style="height: 300px; object-fit: cover;"&gt;
+                    &lt;div class="gallery-overlay"&gt;
+                        &lt;h4 class="fw-bold"&gt;Abstract Origami&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Gallery Item 5 --&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="gallery-item shadow-sm"&gt;
+                    &lt;img src="images/flower.png" class="img-fluid w-100" alt="Origami Butterfly" style="height: 300px; object-fit: cover;"&gt;
+                    &lt;div class="gallery-overlay"&gt;
+                        &lt;h4 class="fw-bold"&gt;Origami Butterfly&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Gallery Item 6 --&gt;
+            &lt;div class="col-md-4"&gt;
+                &lt;div class="gallery-item shadow-sm"&gt;
+                    &lt;img src="images/banner.png" class="img-fluid w-100" alt="Origami Box" style="height: 300px; object-fit: cover;"&gt;
+                    &lt;div class="gallery-overlay"&gt;
+                        &lt;h4 class="fw-bold"&gt;Origami Box&lt;/h4&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="text-center"&gt;
+        &lt;div class="container border-top pt-4 pb-2"&gt;
+            &lt;p class="footer-text small mb-0"&gt;&amp;copy; 2026 OrigamiForAll. All rights reserved.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><div class='page-break'><h2>File: css\style.css</h2><p class='explanation'>The main stylesheet responsible for the website's layout, animations, color palette, and responsive design.<br>It includes modern styling elements like gradients, glassmorphism, and custom component styles.<br>It defines the custom splash screen animation and hover effects.<br></p><pre><code>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');
+
+:root {
+  --primary-color: #6C5CE7;
+  /* Purple */
+  --secondary-color: #74B9FF;
+  /* Light Blue */
+  --accent-color: #FD79A8;
+  /* Pink */
+  --success-color: #55E6C1;
+  /* Soft Green */
+  --light-color: #F8F9FA;
+  /* White/Light Grey */
+  --dark-color: #2D3436;
+  --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--dark-color);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--dark-color) !important;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(253, 121, 168, 0.4);
+  color: white;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  padding: 40px 0;
+  margin-top: 50px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.footer-text {
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+/* Utilities */
+.text-primary-custom {
+  color: var(--primary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-light-blue {
+  background-color: rgba(116, 185, 255, 0.1);
+}
+
+.bg-soft-green {
+  background-color: 0rgba(85, 230, 193, 0.1);
+}
+
+.rounded-custom {
+  border-radius: 20px;
+}
+
+.section-title {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: var(--accent-color);
+  bottom: -10px;
+  left: 25%;
+  border-radius: 2px;
+}
+
+/* Gallery Hover */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(108, 92, 231, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Instructions */
+.step-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+  background: var(--secondary-color);
+  color: white;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Splash Screen Animation */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-gradient);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeOutSplash 1s ease 4s forwards;
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  animation: slideUpSplash 1s ease forwards;
+}
+
+.splash-subtitle {
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeInSplash 0.5s ease 0.5s forwards;
+}
+
+.team-names span {
+  display: inline-block;
+  opacity: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin: 0 5px;
+  animation: fadeInSplash 0.5s ease forwards;
+}
+
+.team-names span:nth-child(1) {
+  animation-delay: 1.0s;
+}
+
+.team-names span:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.team-names span:nth-child(3) {
+  animation-delay: 2.0s;
+}
+
+.team-names span:nth-child(4) {
+  animation-delay: 2.5s;
+}
+
+.team-names span:nth-child(5) {
+  animation-delay: 3.0s;
+}
+
+@keyframes fadeOutSplash {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeInSplash {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideUpSplash {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}</code></pre></div><div class='page-break'><h2>File: js\script.js</h2><p class='explanation'>Contains the logic to dynamically populate the categories page with design data and handle modal interactions.<br>It defines an array of origami objects including steps, images, and difficulty levels.<br>It creates the DOM elements for each category card and manages the details popup.<br></p><pre><code>const categories = [
+    {
+        id: 1,
+        name: "Faces",
+        icon: "fa-face-smile",
+        level: "easy",
+        image: "images/crane.png",
+        description: "Simple origami faces including dogs, cats, and human shapes.",
+        designName: "Dog Face",
+        steps: ["Fold paper diagonally.", "Fold the top corners down for ears.", "Fold the bottom tip up for the snout.", "Draw eyes and nose."]
+    },
+    {
+        id: 2,
+        name: "Animals",
+        icon: "fa-dog",
+        level: "medium",
+        image: "images/banner.png",
+        description: "Create wonderful land animals out of paper.",
+        designName: "Jumping Frog",
+        steps: ["Fold the paper in half vertically.", "Fold corners to center to make a waterbomb base.", "Fold legs outward.", "Fold the bottom up to create a spring."]
+    },
+    {
+        id: 3,
+        name: "Birds",
+        icon: "fa-dove",
+        level: "complex",
+        image: "images/crane.png",
+        description: "Elegant birds taking flight.",
+        designName: "Paper Crane",
+        steps: ["Step 1: Fold paper diagonally.", "Step 2: Create a square base.", "Step 3: Fold edges to the center to form a bird base.", "Step 4: Fold the wings down.", "Step 5: Form the head by inside reverse folding one point."]
+    },
+    {
+        id: 4,
+        name: "Flowers",
+        icon: "fa-seedling",
+        level: "medium",
+        image: "images/flower.png",
+        description: "Beautiful paper blooms.",
+        designName: "Tulip",
+        steps: ["Fold diagonally to form a triangle.", "Fold both bottom corners up to the top tip.", "Slightly fold the side corners inward.", "Attach to a paper stem."]
+    },
+    {
+        id: 5,
+        name: "Fish",
+        icon: "fa-fish",
+        level: "easy",
+        image: "images/banner.png",
+        description: "Swim in the paper sea.",
+        designName: "Simple Fish",
+        steps: ["Fold paper in half diagonally.", "Fold top tip down.", "Fold bottom corners up to form fins.", "Draw a cute eye."]
+    },
+    {
+        id: 6,
+        name: "Insects",
+        icon: "fa-bug",
+        level: "complex",
+        image: "images/flower.png",
+        description: "Tiny and intricate paper bugs.",
+        designName: "Butterfly",
+        steps: ["Start with a waterbomb base.", "Fold the front flaps up.", "Flip over and fold the bottom tip past the top edge.", "Fold in half to lock the shape."]
+    },
+    {
+        id: 7,
+        name: "Boxes",
+        icon: "fa-box",
+        level: "medium",
+        image: "images/banner.png",
+        description: "Useful and beautiful paper containers.",
+        designName: "Masu Box",
+        steps: ["Fold paper in half both ways.", "Fold all 4 corners to the center (Blintz fold).", "Fold edges to center line.", "Open sides and form the box walls."]
+    },
+    {
+        id: 8,
+        name: "Toys",
+        icon: "fa-gamepad",
+        level: "easy",
+        image: "images/crane.png",
+        description: "Fun, interactive origami toys.",
+        designName: "Paper Airplane",
+        steps: ["Fold paper in half lengthwise.", "Fold top corners to the center line.", "Fold the peak down.", "Fold wings out."]
+    },
+    {
+        id: 9,
+        name: "Stars",
+        icon: "fa-star",
+        level: "easy",
+        image: "images/flower.png",
+        description: "Lucky stars and decorative star shapes.",
+        designName: "Lucky Star",
+        steps: ["Cut a long strip of paper.", "Tie a knot at one end and flatten it into a pentagon.", "Wrap the remaining strip around the pentagon.", "Puff out the sides with your nails."]
+    },
+    {
+        id: 10,
+        name: "Decorative Items",
+        icon: "fa-gem",
+        level: "complex",
+        image: "images/banner.png",
+        description: "Beautiful geometric and modular origami.",
+        designName: "Origami Kusudama",
+        steps: ["Fold 6 individual flower units.", "Glue or stitch the units together to form a sphere.", "Add a tassel at the bottom for decoration."]
+    }
+];
+
+document.addEventListener("DOMContentLoaded", () =&gt; {
+    const categoryList = document.getElementById("categoryList");
+    
+    if (categoryList) {
+        categories.forEach(cat =&gt; {
+            const col = document.createElement("div");
+            col.className = `col-md-6 col-lg-4 mb-4 ${cat.level}`;
+            
+            col.innerHTML = `
+                &lt;div class="card h-100 shadow-sm border-0"&gt;
+                    &lt;img src="${cat.image}" class="card-img-top" alt="${cat.name}" style="height: 200px; object-fit: cover;"&gt;
+                    &lt;div class="card-body text-center"&gt;
+                        &lt;i class="fa-solid ${cat.icon} fa-2x mb-2 text-primary-custom"&gt;&lt;/i&gt;
+                        &lt;h4 class="card-title fw-bold"&gt;${cat.name}&lt;/h4&gt;
+                        &lt;span class="badge bg-soft-green text-dark mb-2"&gt;${cat.level.toUpperCase()}&lt;/span&gt;
+                        &lt;p class="card-text text-muted"&gt;${cat.description}&lt;/p&gt;
+                        &lt;button class="btn btn-outline-primary rounded-pill w-100 mt-2" onclick="openDesignModal(${cat.id})"&gt;
+                            Learn ${cat.designName}
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            `;
+            categoryList.appendChild(col);
+        });
+    }
+
+    // Filter functionality
+    const hash = window.location.hash;
+    if(hash &amp;&amp; categoryList) {
+        // Just a simple scroll for now, or filter logic
+        // E.g., if href="#easy", filter to easy
+    }
+});
+
+function openDesignModal(id) {
+    const cat = categories.find(c =&gt; c.id === id);
+    if (!cat) return;
+
+    document.getElementById("modalTitle").innerText = cat.designName + " (" + cat.name + ")";
+    document.getElementById("modalImg").src = cat.image;
+    document.getElementById("modalDesc").innerText = cat.description;
+    
+    const stepsContainer = document.getElementById("modalSteps");
+    stepsContainer.innerHTML = "";
+    
+    cat.steps.forEach((step, index) =&gt; {
+        stepsContainer.innerHTML += `
+            &lt;div class="step-card"&gt;
+                &lt;span class="step-number"&gt;${index + 1}&lt;/span&gt;
+                &lt;span class="text-dark fw-medium"&gt;${step}&lt;/span&gt;
+            &lt;/div&gt;
+        `;
+    });
+
+    const modal = new bootstrap.Modal(document.getElementById('designModal'));
+    modal.show();
+}
+</code></pre></div></body></html>
